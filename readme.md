@@ -59,9 +59,21 @@ Check its architecture
 
 It will show 
 ```
-Platform:  linux/amd64
-Platform:  linux/arm64
+Name:      docker.io/xros/django_app_docker_demo_web:0.1
+MediaType: application/vnd.docker.distribution.manifest.list.v2+json
+Digest:    sha256:b04da36cfafc626f281178598041378eccf5e914e0cfd93f40330bdd2b4e9551
+           
+Manifests: 
+  Name:      docker.io/xros/django_app_docker_demo_web:0.1@sha256:afec423f932db9a7f7d6614bd65fddc1da31a5c4de7e8a975f48d5c32ff4aea3
+  MediaType: application/vnd.docker.distribution.manifest.v2+json
+  Platform:  linux/amd64
+             
+  Name:      docker.io/xros/django_app_docker_demo_web:0.1@sha256:899cb52ccc886751ad8f2d41de4b9c060867a8751a7fe9e3f428a466c7af9706
+  MediaType: application/vnd.docker.distribution.manifest.v2+json
+  Platform:  linux/arm64
 ```
+
+Check it from DockerHub: https://hub.docker.com/r/xros/django_app_docker_demo_web , then write a new `docker-compose.yaml` to run directly from the new Docker Image.
 
 
 Other tutorials Run Django app with Postgresql in Docker
