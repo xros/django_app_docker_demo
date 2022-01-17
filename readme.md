@@ -24,7 +24,7 @@ Build a new Docker image
 -----------------
 Everytime after you change python codes, build it and add a new tag.
 
-####Userful tutorials about building docker images
+#### Userful tutorials about building docker images
 
 [Build multi-arch images with Buildx](https://docs.docker.com/desktop/multi-arch/)
 
@@ -49,12 +49,15 @@ Platforms: linux/arm64, linux/amd64, linux/riscv64, linux/ppc64le, linux/s390x, 
 I'm using M1 MacBook Pro, by default it only builds ARM64 docker images.
 
 So I create a new builder for M1 mac. I want to build image for AMD64 and ARM64.
+
 `docker buildx create --use --name m1_builder`
 
 Build and push it to docker hub.
+
 `docker buildx build --platform linux/amd64,linux/arm64 --push -t xros/django_app_docker_demo_web:0.1 .`
 
 Check its architecture
+
 `docker buildx imagetools inspect xros/django_app_docker_demo_web:0.1`
 
 It will show 
